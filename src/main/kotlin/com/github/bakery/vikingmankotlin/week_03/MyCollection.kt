@@ -9,6 +9,19 @@ class ListFactory{
 }
 
 
+fun sum() : Int {
+    val f = ListFactory()
+    f.modify().map{ it ->
+        run {
+            if (it == 3) {
+                return@map 3
+            }
+        }
+    }
+
+    return 3
+}
+
 
 fun main(){
     val f = ListFactory()
@@ -16,6 +29,5 @@ fun main(){
     val immutableList = f.unModify()
     val size = immutableList.size;
     f.modify().add(1)
-
     println(immutableList.size == size)
 }

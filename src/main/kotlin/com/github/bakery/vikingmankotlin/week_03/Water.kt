@@ -23,7 +23,6 @@ class Water(val waterSource: String, var amount: Int = 0){
 
 /* null이 가능한 Water 타입에 isNullOrEmpty 함수를 확장하시오 */
 
-
 inline fun Water?.isNullOrEmpty() : Boolean = this == null || this.amount == 0
 
 
