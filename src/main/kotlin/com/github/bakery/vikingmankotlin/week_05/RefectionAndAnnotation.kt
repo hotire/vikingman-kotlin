@@ -3,6 +3,7 @@ package com.github.bakery.vikingmankotlin.week_05
 import java.lang.annotation.Inherited
 import java.security.MessageDigest
 import kotlin.reflect.KProperty
+import kotlin.reflect.full.declaredMemberProperties
 
 fun String.sha256(): String {
     return hashString(this, "SHA-256")
